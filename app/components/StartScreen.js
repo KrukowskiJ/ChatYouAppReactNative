@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { LinearGradient } from 'expo-linear-gradient';
 
+
 import {
   View,
   Image,
@@ -25,15 +26,15 @@ class StartScreen extends Component {
         }}
       />
       <SafeAreaView style={styles.container}>
-        <Image source={require("../assets/favicon.png")} style={styles.logo} />
+        <Image source={require("../assets/bat.png")} style={styles.logo} />
 
         <View>
-          <Text style={styles.name}>ChatYouApp</Text>
+          <Text style={styles.appname}>ChatYouApp</Text>
 
-          <Text style={styles.text}>Wygraj życie!</Text>
+          <Text style={styles.motto}>Wygraj życie!</Text>
         </View>
 
-        <Image source={require("../assets/icon.png")} style={styles.logo2} />
+        <Image source={require("../assets/rak'roll.png")} style={styles.logo2} />
       </SafeAreaView>
       </View>
     );
@@ -42,29 +43,35 @@ class StartScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "transparent",
-    alignItems: "center",
     justifyContent: "space-around",
+    alignItems: "center",
     height: '100%',
   },
   logo: {
-    width: 100,
-    height: 100,
+    top: 250,
+    position: 'absolute',
+    width: 198,
+    height: 70,
   },
-  name: {
+  appname: {
+    marginTop: 20,
     color: "white",
     textAlign: "center",
-    fontSize: 35,
-  },
-  text: {
-    color: "white",
-    textAlign: "center",
-    fontSize: 25,
+    fontSize: 65,
     fontStyle: "italic",
   },
+  motto: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 55,
+    fontStyle: "italic",
+    lineHeight: 60,
+  },
   logo2: {
-    width: 50,
-    height: 50,
+    bottom: 20,
+    position: 'absolute',
+    width: 60,
+    height: 60,
   },
 });
 

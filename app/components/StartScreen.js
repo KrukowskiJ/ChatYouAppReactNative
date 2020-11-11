@@ -1,22 +1,30 @@
 import React, { Component } from "react";
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 import {
   View,
   Image,
   StyleSheet,
   Text,
+  TouchableHighlight,
   SafeAreaView,
 } from "react-native";
 
+
+
 class StartScreen extends Component {
+  componentDidMount() {
+
+    setTimeout(() => {
+      this.props.navigation.navigate('Screen2')
+      }, 5000);
+  }
   render() {
     return (
       <View>
       <LinearGradient
         // Background Linear Gradient
-        colors={['#FFA843', 'rgba(255, 250, 124, 0.75)']}
+        colors={['#FF9416', 'rgba(255, 248, 89, 0.75)']}
         style={{
           position: 'absolute',
           left: 0,
@@ -33,7 +41,7 @@ class StartScreen extends Component {
 
           <Text style={styles.motto}>Wygraj życie!</Text>
         </View>
-
+      
         <Image source={require("../assets/rak'roll.png")} style={styles.logo2} />
       </SafeAreaView>
       </View>

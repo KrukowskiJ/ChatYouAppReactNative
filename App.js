@@ -1,23 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
-import ChatList from './views/ChatList';
+import { StatusBar } from "expo-status-bar";
+import React, {Component} from 'react';
+import StackNavigator from './app/components/StackNavigator';
+import { StyleSheet, Text, View } from "react-native";
+import StartScreen from "./app/components/StartScreen";
+import Login from "./app/components/Login";
 
 
-export default function App() {
-
-  const Stack = createStackNavigator();
+/*export default function App() {
   return (
-    <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen
-              name="Chat"
-              component={ChatList}
-            />
-        </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+    <View style={styles.container}>
+      <Login />
 
+      <StatusBar style="auto" />
+    </View>
+  );
+}*/
+export default class App extends Component {
+  render() {
+    return <StackNavigator />
+  }
+} 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

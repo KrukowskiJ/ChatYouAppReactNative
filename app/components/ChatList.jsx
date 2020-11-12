@@ -1,6 +1,5 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View } from 'react-native';
-import styled from 'styled-components/native';
 import {LinearGradient} from 'expo-linear-gradient';
 import Logo from '../assets/logo.png';
 import Lupa from '../assets/lupa.png';

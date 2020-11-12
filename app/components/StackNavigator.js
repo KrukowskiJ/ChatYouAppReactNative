@@ -4,6 +4,8 @@ import Login from './Login';
 import StartScreen from './StartScreen'; 
 import { createStackNavigator } from 'react-navigation-stack';
 import * as Font from "expo-font";
+import ChatList from './ChatList';
+
 const MyStackNavigator = createStackNavigator(
     {
       Home: {
@@ -18,9 +20,15 @@ const MyStackNavigator = createStackNavigator(
         headerShown: false
       },
     },
+      ChatMenu: {
+        screen: ChatList,
+        navigationOptions: {
+          headerShown: false
+        },
+    },
   },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'ChatMenu',
       },
 );
 const AppContainer = createAppContainer(MyStackNavigator);

@@ -5,6 +5,10 @@ import StartScreen from './StartScreen';
 import { createStackNavigator } from 'react-navigation-stack';
 import * as Font from "expo-font";
 import ChatList from './ChatList';
+import Chatbot from './Chatbot';
+import Chatbox from './ChatBox';
+import ChatConnect from './ChatConnect';
+import RandUserMenu from './RandUserMenu';
 
 const MyStackNavigator = createStackNavigator(
     {
@@ -26,6 +30,30 @@ const MyStackNavigator = createStackNavigator(
           headerShown: false
         },
     },
+      Chatbot: {
+        screen: Chatbot,
+        navigationOptions: {
+          headerShown: false
+        }
+      },
+      Chatbox: {
+        screen: Chatbox,
+        navigationOptions:{
+          headerShown: false
+        }
+      },
+      ChatConnect: {
+        screen: ChatConnect,
+        navigationOptions:{
+          headerShown: false
+        }
+      },
+      RandUserMenu: {
+        screen: RandUserMenu,
+        navigationOptions:{
+          headerShown: false
+        }
+      }
   },
     {
         initialRouteName: 'ChatMenu',

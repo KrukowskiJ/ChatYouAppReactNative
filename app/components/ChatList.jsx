@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View } from 'react-native';
+import {Button, Image, StyleSheet, Text, View } from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient';
 import Logo from '../assets/logo.png';
 import Lupa from '../assets/lupa.png';
@@ -8,7 +8,7 @@ import ChatBotAvatar from '../assets/chatbotlogo.png';
 import UserAvatar from '../assets/useravatar.png'
 import UserAvatar2 from '../assets/useravatar2.png'
 
-export default function ChatList(){
+export default function ChatList({ navigation }){
     const styles = StyleSheet.create({
         container: {
            backgroundColor: '#fff',
@@ -104,7 +104,7 @@ export default function ChatList(){
                 />
                 <TextInput
                     style={styles.text}
-                    value="Search user"
+                    placeholder='Search user'
                 />
             </View>
         );
@@ -112,7 +112,7 @@ export default function ChatList(){
 
      const RandUserButton=()=>{
         return(
-            <View style={styles.randuserField}>
+            <View style={styles.randuserField} onStartShouldSetResponder={() => navigation.navigate('RandUserMenu')}>
                 <Text style={styles.randUser}>
                     Rand new user
                 </Text>
@@ -123,13 +123,16 @@ export default function ChatList(){
      const Contact=(props)=>{
          if(props.icon=="0"){
              var avatarIcon=ChatBotAvatar;
+             var nextPage="Chatbot";
          }else if(props.icon=="1"){
              var avatarIcon=UserAvatar;
+             var nextPage="Chatbox";
          }else{
             var avatarIcon=UserAvatar2;
+            var nextPage="Chatbox";
          }
          return(
-             <View style={styles.contact}>
+             <View style={styles.contact} onStartShouldSetResponder={() => navigation.navigate(nextPage)} >
                  <Image 
                     source={avatarIcon}
                     style={styles.avatar}

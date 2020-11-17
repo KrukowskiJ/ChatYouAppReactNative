@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   line2: {
     //width: "auto",
-    //color: "rgba(69,68,68,0.66)",
+    color: "rgba(69,68,68,0.66)",
     fontSize: 30,
     fontFamily: 'NotoSansMalayalamRegular',
     padding: 4,

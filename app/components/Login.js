@@ -25,7 +25,7 @@ class Login extends Component {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity style={styles.button} onPress={() => alert('Dzaialm se, nie?')}>
+          <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Menu')}>
             <Text style={styles.buttonText}>Log in</Text>
           </TouchableOpacity>
 
